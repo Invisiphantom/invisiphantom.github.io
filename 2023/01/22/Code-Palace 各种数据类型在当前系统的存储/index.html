@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Code-Palace 各种数据类型在当前系统的存储 | 残影-无痕</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071#include &lt;stdio.h&gt;#include &lt;stdlib.h&gt;#include &lt;float">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Code-Palace 各种数据类型在当前系统的存储">
+<meta property="og:url" content="http://example.com/2023/01/22/Code-Palace%20%E5%90%84%E7%A7%8D%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%9C%A8%E5%BD%93%E5%89%8D%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AD%98%E5%82%A8/index.html">
+<meta property="og:site_name" content="残影-无痕">
+<meta property="og:description" content="1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071#include &lt;stdio.h&gt;#include &lt;stdlib.h&gt;#include &lt;float">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-01-22T12:59:17.000Z">
+<meta property="article:modified_time" content="2023-01-22T13:03:27.108Z">
+<meta property="article:author" content="Ethan Cao">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="残影-无痕" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">残影-无痕</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 订阅"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Code-Palace 各种数据类型在当前系统的存储" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/01/22/Code-Palace%20%E5%90%84%E7%A7%8D%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%9C%A8%E5%BD%93%E5%89%8D%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AD%98%E5%82%A8/" class="article-date">
+  <time class="dt-published" datetime="2023-01-22T12:59:17.000Z" itemprop="datePublished">2023-01-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Code-Palace 各种数据类型在当前系统的存储
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#include &lt;stdlib.h&gt;</span><br><span class="line">#include &lt;float.h&gt;</span><br><span class="line">#include &lt;limits.h&gt;</span><br><span class="line">#include &lt;inttypes.h&gt;</span><br><span class="line">#define ONE 1</span><br><span class="line">#define FIFTEEN 15</span><br><span class="line">#define SEVENTY_NINE 79</span><br><span class="line"></span><br><span class="line">int main() &#123;</span><br><span class="line">    printf(&quot;One byte = %d bits on this system.\n\n&quot;, CHAR_BIT);</span><br><span class="line"></span><br><span class="line">    printf(&quot;char has a size of %zd byte.\n&quot;, sizeof(char));</span><br><span class="line">    printf(&quot;Smallest char: %hhd\n&quot;, CHAR_MIN);</span><br><span class="line">    printf(&quot;Biggest char: %hhd\n&quot;, CHAR_MAX);</span><br><span class="line">    printf(&quot;Biggest unsigned char: %hhu\n\n&quot;, UCHAR_MAX);</span><br><span class="line"></span><br><span class="line">    printf(&quot;short has a size of %zd bytes.\n&quot;, sizeof(short));</span><br><span class="line">    printf(&quot;Smallest short: %hd\n&quot;, SHRT_MIN);</span><br><span class="line">    printf(&quot;Biggest short: %hd\n&quot;, SHRT_MAX);</span><br><span class="line">    printf(&quot;Biggest unsigned short: %hu\n\n&quot;, USHRT_MAX);</span><br><span class="line"></span><br><span class="line">    printf(&quot;int has a size of %zd bytes.\n&quot;, sizeof(int));</span><br><span class="line">    printf(&quot;Smallest int: %d\n&quot;, INT_MIN);</span><br><span class="line">    printf(&quot;Biggest int: %d\n&quot;, INT_MAX);</span><br><span class="line">    printf(&quot;Biggest unsigned int: %u\n\n&quot;, UINT_MAX);</span><br><span class="line"></span><br><span class="line">    printf(&quot;long has a size of %zd bytes.\n&quot;, sizeof(long));</span><br><span class="line">    printf(&quot;Smallest long: %ld\n&quot;, LONG_MIN);</span><br><span class="line">    printf(&quot;Biggest long: %ld\n&quot;, LONG_MAX);</span><br><span class="line">    printf(&quot;Biggest unsigned long: %lu\n\n&quot;, ULONG_MAX);</span><br><span class="line"></span><br><span class="line">    printf(&quot;long long has a size of %zd bytes.\n&quot;, sizeof(long long));</span><br><span class="line">    printf(&quot;Smallest long long: %lld\n&quot;, LLONG_MIN);</span><br><span class="line">    printf(&quot;Biggest long long: %lld\n&quot;, LLONG_MAX);</span><br><span class="line">    printf(&quot;Biggest unsigned long long: %llu\n\n&quot;, ULLONG_MAX);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    printf(&quot;float has a size of %zd bytes.\n&quot;, sizeof(float));</span><br><span class="line">    printf(&quot;float s = %d bit, exp = %d bits, frac = %d bits.\n&quot;, ONE, sizeof(float) * CHAR_BIT - FLT_MANT_DIG, FLT_MANT_DIG - 1);</span><br><span class="line">    printf(&quot;float min exponent = %d.\n&quot;, FLT_MIN_EXP - 1);</span><br><span class="line">    printf(&quot;float max exponent = %d.\n&quot;, FLT_MAX_EXP - 1);</span><br><span class="line">    printf(&quot;float precison = %d digits\n&quot;, FLT_DIG);</span><br><span class="line">    printf(&quot;float epsilon = %.10E\n&quot;, FLT_EPSILON);</span><br><span class="line">    printf(&quot;Smallest normal float: %.10E\n&quot;, FLT_MIN);</span><br><span class="line">    printf(&quot;Largest normal float: %.10E\n\n&quot;, FLT_MAX);</span><br><span class="line"></span><br><span class="line">    printf(&quot;double has a size of %zd bytes.\n&quot;, sizeof(double));</span><br><span class="line">    printf(&quot;double s = %d bit, exp = %d bits, frac = %d bits.\n&quot;, ONE, sizeof(double) * CHAR_BIT - DBL_MANT_DIG, DBL_MANT_DIG - 1);</span><br><span class="line">    printf(&quot;double min exponent = %d.\n&quot;, DBL_MIN_EXP - 1);</span><br><span class="line">    printf(&quot;double max exponent = %d.\n&quot;, DBL_MAX_EXP - 1);</span><br><span class="line">    printf(&quot;double precison = %d digits\n&quot;, DBL_DIG);</span><br><span class="line">    printf(&quot;double epsilon = %.10lE\n&quot;, DBL_EPSILON);</span><br><span class="line">    printf(&quot;Smallest double: %.10lE\n&quot;, DBL_MIN);</span><br><span class="line">    printf(&quot;Largest double: %.10lE\n\n&quot;, DBL_MAX);</span><br><span class="line"></span><br><span class="line">    printf(&quot;long double has a size of %zd bytes, but %d useful bits.\n&quot;, sizeof(long double), SEVENTY_NINE); // wasteful but useful for some things such as alignment</span><br><span class="line">    printf(&quot;long double s = %d bit, exp = %d bits, frac = %d bits.\n&quot;, ONE, FIFTEEN, LDBL_MANT_DIG - 1);</span><br><span class="line">    printf(&quot;long double min exponent = %d.\n&quot;, LDBL_MIN_EXP - 1);</span><br><span class="line">    printf(&quot;long double max exponent = %d.\n&quot;, LDBL_MAX_EXP - 1);</span><br><span class="line">    printf(&quot;long double precison = %d digits\n&quot;, LDBL_DIG);</span><br><span class="line">    printf(&quot;long double epsilon = %.10LE\n&quot;, LDBL_EPSILON);</span><br><span class="line">    printf(&quot;Smallest long double: %.10LE\n&quot;, LDBL_MIN);</span><br><span class="line">    printf(&quot;Largest long double: %.10LE\n\n&quot;, LDBL_MAX);</span><br><span class="line">	</span><br><span class="line">    printf(&quot;long double +12345.0L = 00000000 00000000 00000000 00000000 00000000 00000000 /0/1000000 00001100/ 1/1000000 11100100 00000000 00000000 00000000 00000000 00000000 00000000\n&quot;);</span><br><span class="line">    printf(&quot;long double -12345.0L = 00000000 00000000 00000000 00000000 00000000 00000000 /1/1000000 00001100/ 1/1000000 11100100 00000000 00000000 00000000 00000000 00000000 00000000\n&quot;);</span><br><span class="line">	</span><br><span class="line">    system(&quot;pause&quot;);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">//Program output on my (MinGW-W64 x86_64-posix-seh, built by Brecht Sanders) 11.2.0:</span><br><span class="line">One byte = 8 bits on this system.</span><br><span class="line"></span><br><span class="line">char has a size of 1 byte.</span><br><span class="line">Smallest char: -128</span><br><span class="line">Biggest char: 127</span><br><span class="line">Biggest unsigned char: 255</span><br><span class="line"></span><br><span class="line">short has a size of 2 bytes.</span><br><span class="line">Smallest short: -32768</span><br><span class="line">Biggest short: 32767</span><br><span class="line">Biggest unsigned short: 65535</span><br><span class="line"></span><br><span class="line">int has a size of 4 bytes.</span><br><span class="line">Smallest int: -2147483648</span><br><span class="line">Biggest int: 2147483647</span><br><span class="line">Biggest unsigned int: 4294967295</span><br><span class="line"></span><br><span class="line">long has a size of 4 bytes.</span><br><span class="line">Smallest long: -2147483648</span><br><span class="line">Biggest long: 2147483647</span><br><span class="line">Biggest unsigned long: 4294967295</span><br><span class="line"></span><br><span class="line">long long has a size of 8 bytes.</span><br><span class="line">Smallest long long: -9223372036854775808</span><br><span class="line">Biggest long long: 9223372036854775807</span><br><span class="line">Biggest unsigned long long: 18446744073709551615</span><br><span class="line"></span><br><span class="line">float has a size of 4 bytes.</span><br><span class="line">float s = 1 bit, exp = 8 bits, frac = 23 bits.</span><br><span class="line">float min exponent = -126.</span><br><span class="line">float max exponent = 127.</span><br><span class="line">float precison = 6 digits</span><br><span class="line">float epsilon = 1.1920928955E-07</span><br><span class="line">Smallest normal float: 1.1754943508E-38</span><br><span class="line">Largest normal float: 3.4028234664E+38</span><br><span class="line"></span><br><span class="line">double has a size of 8 bytes.</span><br><span class="line">double s = 1 bit, exp = 11 bits, frac = 52 bits.</span><br><span class="line">double min exponent = -1022.</span><br><span class="line">double max exponent = 1023.</span><br><span class="line">double precison = 15 digits</span><br><span class="line">double epsilon = 2.2204460493E-16</span><br><span class="line">Smallest double: 2.2250738585E-308</span><br><span class="line">Largest double: 1.7976931349E+308</span><br><span class="line"></span><br><span class="line">long double has a size of 16 bytes, but 79 useful bits.</span><br><span class="line">long double s = 1 bit, exp = 15 bits, frac = 63 bits.</span><br><span class="line">long double min exponent = -16382.</span><br><span class="line">long double max exponent = 16383.</span><br><span class="line">long double precison = 18 digits</span><br><span class="line">long double epsilon = 1.0842021725E-19</span><br><span class="line">Smallest long double: 3.3621031431E-4932</span><br><span class="line">Largest long double: 1.1897314954E+4932</span><br><span class="line"></span><br><span class="line">long double +12345.0L = 00000000 00000000 00000000 00000000 00000000 00000000 /0/1000000 00001100/ 1/1000000 11100100 00000000 00000000 00000000 00000000 00000000 00000000</span><br><span class="line">long double -12345.0L = 00000000 00000000 00000000 00000000 00000000 00000000 /1/1000000 00001100/ 1/1000000 11100100 00000000 00000000 00000000 00000000 00000000 00000000</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/01/22/Code-Palace%20%E5%90%84%E7%A7%8D%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%9C%A8%E5%BD%93%E5%89%8D%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AD%98%E5%82%A8/" data-id="cld7e4wj80000voex7h0l86lb" data-title="Code-Palace 各种数据类型在当前系统的存储" class="article-share-link">分享</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/01/22/Code-Palace%20%E5%90%84%E7%A7%8D%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6%E8%A1%A8%E7%A4%BA/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          Code-Palace 各种数据类型的十六进制表示
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/01/22/Welcome-file/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">Welcome file</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/01/">一月 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/01/22/Code-Palace%20%E5%90%84%E7%A7%8D%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6%E8%A1%A8%E7%A4%BA/">Code-Palace 各种数据类型的十六进制表示</a>
+          </li>
+        
+          <li>
+            <a href="/2023/01/22/Code-Palace%20%E5%90%84%E7%A7%8D%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%9C%A8%E5%BD%93%E5%89%8D%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AD%98%E5%82%A8/">Code-Palace 各种数据类型在当前系统的存储</a>
+          </li>
+        
+          <li>
+            <a href="/2023/01/22/Welcome-file/">Welcome file</a>
+          </li>
+        
+          <li>
+            <a href="/2023/01/22/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 Ethan Cao<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
